@@ -1,0 +1,352 @@
+body{
+    font-family: 'League Spartan', sans-serif;
+}
+img{
+    max-width: 100%;
+}
+header{
+    background-color: #c9c2c2;
+    padding: 10px 0px;
+}
+header .logo{
+    width: 90px;
+}
+/* menu  */
+header .menu{
+    display: flex;
+    align-items: center;
+}
+header .menu ul{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+}
+header .menu ul li{
+    list-style: none;
+    align-items: center;
+    margin: 0 8px;
+    position: relative;
+}
+header .menu ul li a{
+    text-decoration: none;
+    color: #58595d;
+    font-size: 15px;
+    padding: 10px 10px;
+    display: block;
+    font-weight: 600;
+    position: relative;
+}
+/* hover  */
+header .menu ul li a:hover{
+    color: #9889ec;
+    transition: .3s;
+}
+/* border bottom  */
+header .menu ul li a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    top: 57px;
+    left: 0;
+    background: #9889ec;
+    transform: scaleX(1);
+    transition: all .3s ease-in-out;
+}
+header .menu ul li a:hover::after{
+    width: 100%;
+}
+/* active css  */
+header .menu ul li .active{
+    color: #9889ec;
+}
+header .menu ul li .active::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 57px;
+    left: 0;
+    background: #9889ec;
+}
+/* dropdown  */
+header .menu ul li ul {
+    position: absolute;
+    top: 140%;
+    left: 0px;
+    width: 157px;
+    background-color: #3662eb;
+    color: #fff;
+    border: 16px solid rgb(255, 255, 255);
+    padding: 12px 10px;
+    transform: scaleY(0);
+    transition:all .6s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+}
+header .menu ul li:hover ul{
+    transform: scaleY(1);
+    opacity: 1;
+    visibility: visible;
+}
+/* btn  */
+header .button{
+    font-size: 15px;
+    font-weight: 600;
+    color: #3662eb;
+    background-color: #fff;
+    margin-left: 50px;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+    display: block;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+header .button::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    border-radius: 25px;
+    top:  0;
+    left: 0;
+    background-color: #3662eb;
+    color: #fff;
+    transition: .5s ;
+    z-index: -1;
+}
+header .button:hover{
+    color: #fff;
+    transition: .5s ;
+}
+header .button:hover::after{
+    width: 100%;
+    transition: .5s ;
+}
+/* banner section  */
+.banner-section{
+    background-color: #edf6ff;
+    position: relative;
+    overflow: hidden;
+    height: 540px;
+}
+.banner-section .shape::after {
+    content: "";
+    position: absolute;
+    width: 660px;
+    height: 660px;
+    border-radius: 50%;
+    background: url(../images/hero-image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    top: -110px;
+    left: 790px;
+    z-index: 1;
+}
+.banner-section .banner-text{
+    margin-top: 150px;
+}
+.banner-section .banner-text p{
+    margin: 30px 0px;
+    color: rgb(141, 140, 140);
+}
+.banner-section .banner-text .banner-btn{
+    color: #fff;
+    background-color: #3662eb;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 17px;
+    border: 1px solid #3662eb;
+    transition: .3s;
+}
+.banner-section .banner-text .banner-btn:hover{
+    color: #3662eb;
+    background-color: #fff;
+    border: 1px solid #3662eb;
+}
+/* feature section  */
+.feature-section{
+    position: relative;
+    padding-bottom: 40px;
+}
+.feature-section::after {
+    content: "";
+    position: absolute;
+    background: url(../images/service-patern.png);
+    top: 310px;
+    left: 67px;
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+}
+.feature-section .top-text span{
+    color: #9889ec;
+}
+.feature-section .top-text h1{
+    position: relative;
+}
+.feature-section .top-text h1::after{
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 2px;
+    top: 102px;
+    left: 7px;
+    background-color: #9889ec;
+}
+.feature-section .top-text p{
+    padding-right: 140px;
+    color: rgb(141, 140, 140);
+    margin: 25px 0;
+}
+/* box css  */
+.feature-section .box-wrapper .box{
+    background-color: #f8fbfe;
+    border: 3px solid #f5f5f5;
+    padding: 15px;
+    margin: 0 8px;
+    transition: all .5s ease;
+}
+.feature-section .box-wrapper .box:hover{
+    background-color: #3663eba4;
+    transition: all .5s ease-in-out;
+}
+.feature-section .box-wrapper .box:hover h6{
+    color: #fff;
+}
+.feature-section .box-wrapper .box:hover i{
+    color: #3662eb;
+    background-color: #fff;
+}
+.feature-section .box-wrapper .box:hover i::after{
+    background-color: #fff;
+    width: 45px;
+    transform: scaleX(1);
+    transition: all .5s ease-in-out;
+}
+.feature-section .box-wrapper .box:hover p{
+    color: #fff;
+}
+.feature-section .box-wrapper .box:hover {
+    opacity: 1;
+    visibility: visible;
+}
+.feature-section .box-wrapper .box h6{
+    font-weight: 600;
+}
+.feature-section .box-wrapper .box i{
+    background-color: #5252ef;
+    color: #fff;
+    font-size: 20px;
+    padding: 15px;
+    border-radius:  50% 50% 50% 0%;
+    position: relative;
+}
+.feature-section .box-wrapper .box i::after{
+    position: absolute;
+    content: "";
+    width: 31px;
+    height: 2px;
+    top: 58px;
+    left: 0px;
+    background-color: #9889ec;
+}
+.feature-section .box-wrapper .box p{
+    color: rgb(141, 140, 140);
+    margin: 25px 0;
+}
+/* experience section  */
+.experience-section{
+    height: 550px;
+    background-image: url(../images/video-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+.experience-section::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #3f4a68;
+    opacity: .7;
+    z-index: -1;
+}
+.experience-section .text h1{
+    position: relative;
+    margin-bottom: 25px;
+}
+.experience-section .text h1::after{
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 3px;
+    top: 50px;
+    left: 204px;
+    background-color: #fff;
+}
+.experience-section .text i{
+    color: #5252ef;
+    background-color: #fff;
+    font-size: 17px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    line-height: 70px;
+    position: relative;
+    z-index: 1;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.experience-section .text i::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 4px double #fff;
+    border-style: double;
+    border-radius: 50%;
+    animation: ringPulse 1.5s infinite;
+    z-index: -1;
+}
+@keyframes ringPulse{
+    0%{
+        opacity: .50;
+        transform: scale(0.30);
+    }
+    25% {
+        opacity: 1;
+        transform: scale(.50);
+    }
+    50% {
+        opacity: 1.5;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+@keyframes shadowPulse{
+    0% {
+        box-shadow: 0 0 8px 6px transparent,
+    }
+    10% {
+        box-shadow: 0 0 8px 6px #e1434b,
+    }
+
+    80%, 100% {
+        box-shadow: 0 0 8px 6px transparent,
+    }
+}
